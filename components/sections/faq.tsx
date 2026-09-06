@@ -15,7 +15,7 @@ export default function FAQ() {
     {
       question: "How does Oudaa verify bank payments?",
       answer:
-        "Residents submit a transaction ID when they pay by bank transfer or mobile money, and Oudaa cross-checks it directly against the provider — CBE, Telebirr, Dashen, Bank of Abyssinia, CBE Birr, or M-Pesa — instead of trusting a typed-in claim.",
+        "Residents submit a transaction ID when they pay by bank transfer or mobile money, and Oudaa cross-checks it directly against the provider — CBE or Telebirr — instead of trusting a typed-in claim. A safeguard layer also checks the payer name and amount before anything is marked verified.",
     },
     {
       question: "Can more than one committee member review sensitive changes?",

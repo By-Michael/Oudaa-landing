@@ -1,157 +1,74 @@
 "use client"
 
+import Link from "next/link"
+import Image from "next/image"
 import { Github, Twitter, Linkedin } from "lucide-react"
+
+const footerLinks = {
+  Product: [
+    { label: "Features", href: "/features" },
+    { label: "Security", href: "/security" },
+    { label: "Bank Verification", href: "/bank-verification" },
+  ],
+  Solutions: [
+    { label: "HOAs", href: "/solutions#hoas" },
+    { label: "Apartment & Condo Committees", href: "/solutions#apartment-committees" },
+    { label: "Clubs & Membership Groups", href: "/solutions#clubs" },
+    { label: "Companies", href: "/solutions#companies" },
+  ],
+  Resources: [
+    { label: "Documentation", href: "/documentation" },
+    { label: "Blog", href: "/blog" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "API Reference", href: "/documentation#api-reference" },
+  ],
+  Company: [
+    { label: "About", href: "/about" },
+    { label: "Careers", href: "/careers" },
+    { label: "Contact", href: "/contact" },
+    { label: "Press", href: "/press" },
+  ],
+  Legal: [
+    { label: "Privacy", href: "/privacy" },
+    { label: "Terms", href: "/terms" },
+    { label: "Cookies", href: "/cookies" },
+    { label: "DPA", href: "/dpa" },
+  ],
+}
 
 export default function Footer() {
   return (
     <footer className="relative border-t border-slate-700/50 bg-slate-900/50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-          {/* Product */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Product</h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Security
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Bank Verification
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Solutions</h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  HOAs
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Apartment & Condo Committees
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Clubs & Membership Groups
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Companies
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Resources</h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Case Studies
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  API Reference
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Company</h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Press
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Legal</h4>
-            <ul className="space-y-2 text-sm text-slate-400">
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Privacy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Terms
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  Cookies
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary transition">
-                  DPA
-                </a>
-              </li>
-            </ul>
-          </div>
+          {Object.entries(footerLinks).map(([section, links]) => (
+            <div className="space-y-4" key={section}>
+              <h4 className="font-semibold text-foreground">{section}</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
+                {links.map((link) => (
+                  <li key={link.label}>
+                    <Link href={link.href} className="hover:text-primary transition">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Bottom Section */}
         <div className="border-t border-slate-700/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo/Brand */}
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-xs font-semibold text-primary-foreground">OU</span>
-            </div>
-            <span className="font-semibold text-foreground">Oudaa</span>
-          </div>
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/images/logo.png"
+              alt="Oudaa logo"
+              width={120}
+              height={32}
+              className="h-7 w-auto object-contain"
+            />
+          </Link>
 
           {/* Copyright */}
           <p className="text-sm text-slate-500">© 2026 Oudaa. All rights reserved.</p>

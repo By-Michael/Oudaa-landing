@@ -4,7 +4,6 @@ import Solution from "@/components/sections/solution"
 import Features from "@/components/sections/features"
 import UseCases from "@/components/sections/use-cases"
 import Testimonials from "@/components/sections/testimonials"
-import Pricing from "@/components/sections/pricing"
 import FAQ from "@/components/sections/faq"
 import FinalCTA from "@/components/sections/final-cta"
 import Footer from "@/components/sections/footer"
@@ -24,7 +23,6 @@ export default function Home() {
         <Features />
         <UseCases />
         <Testimonials />
-        <Pricing />
         <FAQ />
         <FinalCTA />
         <Footer />

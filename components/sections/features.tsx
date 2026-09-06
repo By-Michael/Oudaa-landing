@@ -7,7 +7,7 @@ export default function Features() {
     {
       icon: Landmark,
       title: "Bank Payment Verification",
-      description: "Cross-checks resident payments against CBE, Telebirr, Dashen, BOA, CBE Birr, and M-Pesa",
+      description: "Cross-checks resident payments against CBE and Telebirr in real time, with a name/amount safeguard layer",
     },
     {
       icon: Wallet,

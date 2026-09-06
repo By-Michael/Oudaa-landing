@@ -3,7 +3,6 @@ import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 
 import Navbar from "@/components/navbar"
-import DownloadButton from "@/components/sections/download"
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
@@ -41,7 +40,6 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <Navbar />
           {children}
-          <DownloadButton />
         </ThemeProvider>
       </body>
     </html>

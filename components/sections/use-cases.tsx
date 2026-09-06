@@ -1,6 +1,14 @@
 "use client"
 
+import Image from "next/image"
 import { Building2, Home, Users, Landmark, Briefcase, HeartHandshake } from "lucide-react"
+
+const galleryImages = [
+  { src: "/images/communities/hoa-towers-courtyard.jpg", alt: "Landscaped courtyard between residential towers" },
+  { src: "/images/communities/apartment-complex-dusk.jpg", alt: "Apartment complex walkway at dusk" },
+  { src: "/images/communities/gated-community-street.jpg", alt: "Gated HOA community street" },
+  { src: "/images/communities/apartment-complex-cmc.jpg", alt: "High-rise apartment complex with gardens" },
+]
 
 export default function UseCases() {
   const useCases = [
@@ -18,6 +26,21 @@ export default function UseCases() {
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-semibold text-balance neon-text-glow">Who Oudaa Is For</h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">Built for community management, designed to serve any membership-based organization</p>
+        </div>
+
+        {/* Photo strip */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {galleryImages.map((img) => (
+            <div key={img.src} className="relative aspect-[3/4] rounded-xl overflow-hidden border border-primary/20 group">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            </div>
+          ))}
         </div>
 
         {/* Use Cases Grid */}
