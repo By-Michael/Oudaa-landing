@@ -7,7 +7,7 @@ import DashboardPreview from "@/components/dashboard-preview"
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0015] via-[#1a0a2e] to-[#0a0015]"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background"></div>
 
       {/* Decorative glow orbs */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -38,7 +38,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-white/90 font-semibold rounded-full px-8 "
+                className="bg-foreground text-background hover:bg-foreground/90 font-semibold rounded-full px-8 "
               >
                 Create Community
               </Button>

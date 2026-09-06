@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google"
 
 import Navbar from "@/components/navbar"
 import DownloadButton from "@/components/sections/download"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -35,12 +36,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body className={`font-sans antialiased`}>
-        <Navbar />
-        {children}
-         <DownloadButton />
-    
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+          <Navbar />
+          {children}
+          <DownloadButton />
+        </ThemeProvider>
       </body>
     </html>
   )

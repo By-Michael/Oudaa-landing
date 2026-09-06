@@ -33,7 +33,7 @@ export default function FinalCTA() {
             </Button>
             <Button
               size="lg"
-              className="border border-white hover:bg-white hover:text-primary-foreground  text-foreground bg-transparent cursor-pointer"
+              className="border border-foreground hover:bg-foreground hover:text-background  text-foreground bg-transparent cursor-pointer"
             >
               Talk to Us
             </Button>
