@@ -1,40 +1,54 @@
-# CyberShield - a high-impact, cyberpunk-inspired Next.js Cybersecurity SaaS Website Template built for modern security startups, enterprise SaaS platforms, and tech innovators.
-#### Preview
+# Oudaa
 
- - [Demo](https://themewagon.github.io/cybershield/)
+Landing page for **Oudaa** — a community fund management platform for HOAs, residential communities, and member-based organizations. Oudaa replaces cash boxes, WhatsApp groups, and personal spreadsheets with a single, auditable system for dues, shared funds, capital projects, and committee governance.
 
-#### Download
- - [Download from ThemeWagon](https://themewagon.com/themes/cybershield/)
+Built with Next.js, Tailwind CSS, and shadcn/ui.
+
+## Key Capabilities
+
+- **Self-verified bank payments** — residents submit a transaction ID and Oudaa cross-checks it against the actual bank/mobile-money provider (CBE, Telebirr, Dashen, Bank of Abyssinia, CBE Birr, M-Pesa)
+- **Append-only ledger** — a permanent, non-editable Payment/Expense record per community
+- **Multi-party approvals** — sensitive changes (bank details, fee amounts, committee seat transfers) require sign-off from more than one committee member
+- **Full audit log** — every meaningful action is recorded and visible to the committee
+- **Role-based access** — ADMIN (committee) and RESIDENT roles, scoped per community
 
 ## Getting Started
 
-1. Clone Repository
+1. Install dependencies
+```bash
+npm install
 ```
-git clone https://github.com/themewagon/cybershield.git
-```
-2. Install Dependencies
-```
-npm i
-```
-3. Run the development server:
 
+2. Run the development server
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-## Author 
+3. Open [http://localhost:3000](http://localhost:3000) to view it.
+
+## Available Scripts
+
+- `npm run dev` — start the development server
+- `npm run build` — build for production
+- `npm run start` — run the production build
+- `npm run lint` — lint the codebase
+
+## Project Structure
+
 ```
-Design and code is completely written by Codescandy and development team. 
+app/                  # Next.js app router pages
+components/
+  sections/           # Landing page sections (hero, problem, solution, features, pricing, FAQ, etc.)
+  ui/                 # shadcn/ui components
+  navbar.tsx
+  dashboard-preview.tsx
+public/                # Static assets
 ```
 
 ## License
 
- - Design and Code is Copyright &copy; <a href="https://codescandy.com/" target="_blank">Codescandy</a>
- - Licensed cover under [MIT]
- - Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+© 2026 Oudaa. All rights reserved.
