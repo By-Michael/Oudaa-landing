@@ -23,10 +23,10 @@ export default function Hero() {
             </div>
 
             <div className="space-y-6">
-              <h1 className="text-6xl lg:text-6xl font-semibold text-balance leading-tight neon-text-glow">
-                <span className="text-primary">Run Your Community's </span>
+              <h1 className="text-6xl lg:text-6xl font-semibold text-balance leading-tight">
+                <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">Run Your Community's </span>
 
-                <span className="text-primary">Funds With Full Transparency</span>
+                <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">Funds With Full Transparency</span>
               </h1>
              
               <p className="text-xl text-muted-foreground  leading-relaxed">
